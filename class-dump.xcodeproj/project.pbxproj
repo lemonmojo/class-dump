@@ -782,8 +782,8 @@
 		01FB214E222A86950012A5D3 /* Third Party */ = {
 			isa = PBXGroup;
 			children = (
-				01FB2150222A86C40012A5D3 /* blowfish.c */,
 				01FB214F222A86C40012A5D3 /* blowfish.h */,
+				01FB2150222A86C40012A5D3 /* blowfish.c */,
 			);
 			name = "Third Party";
 			sourceTree = "<group>";
@@ -906,14 +906,15 @@
 		01EB825613A590D9003EDE60 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 1000;
+				LastUpgradeCheck = 1320;
 			};
 			buildConfigurationList = 01EB825913A590D9003EDE60 /* Build configuration list for PBXProject "class-dump" */;
 			compatibilityVersion = "Xcode 3.2";
-			developmentRegion = English;
+			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
+				Base,
 			);
 			mainGroup = 01EB825413A590D9003EDE60;
 			productRefGroup = 01EB826013A590D9003EDE60 /* Products */;
@@ -1291,6 +1292,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_COMMA = YES;
@@ -1304,6 +1306,7 @@
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_MISSING_PROPERTY_SYNTHESIS = NO;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
@@ -1331,7 +1334,7 @@
 				GCC_WARN_UNUSED_FUNCTION = NO;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				INSTALL_PATH = /;
-				MACOSX_DEPLOYMENT_TARGET = 10.8;
+				MACOSX_DEPLOYMENT_TARGET = 10.9;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = macosx;
 				WARNING_CFLAGS = (
@@ -1351,6 +1354,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_COMMA = YES;
@@ -1364,6 +1368,7 @@
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_MISSING_PROPERTY_SYNTHESIS = NO;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
@@ -1384,7 +1389,7 @@
 				GCC_WARN_UNUSED_FUNCTION = NO;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				INSTALL_PATH = /;
-				MACOSX_DEPLOYMENT_TARGET = 10.8;
+				MACOSX_DEPLOYMENT_TARGET = 10.9;
 				SDKROOT = macosx;
 				WARNING_CFLAGS = (
 					"-fdiagnostics-show-option",
@@ -1403,12 +1408,15 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CREATE_INFOPLIST_SECTION_IN_BINARY = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "class-dump-Prefix.pch";
+				INFOPLIST_FILE = Info.plist;
 				OTHER_LDFLAGS = (
 					"-all_load",
 					"-ObjC",
 				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.stevenygard.class-dump";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -1417,16 +1425,15 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CREATE_INFOPLIST_SECTION_IN_BINARY = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "class-dump-Prefix.pch";
+				INFOPLIST_FILE = Info.plist;
 				OTHER_LDFLAGS = (
 					"-all_load",
 					"-ObjC",
-					"-sectcreate",
-					__TEXT,
-					"___info_plist",
-					Info.plist,
 				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.stevenygard.class-dump";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;

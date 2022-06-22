@@ -5,10 +5,16 @@
 	<key>CFBundleDevelopmentRegion</key>
 	<string>English</string>
 	<key>CFBundleIdentifier</key>
-	<string>com.stevenygard.class-dump</string>
+	<string>$(PRODUCT_BUNDLE_IDENTIFIER)</string>
 	<key>CFBundleInfoDictionaryVersion</key>
 	<string>6.0</string>
+	<key>CFBundleGetInfoString</key>
+	<string>class-dump 3.5 (350) (forked by @manicmaniac) © 1997-2022 Steve Nygard, et al.</string>
 	<key>CFBundleName</key>
 	<string>class-dump</string>
+	<key>CFBundleShortVersionString</key>
+	<string>3.5</string>
+	<key>CFBundleVersion</key>
+	<string>350</string>
 </dict>
 </plist>
