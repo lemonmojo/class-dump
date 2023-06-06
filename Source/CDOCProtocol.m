@@ -63,6 +63,10 @@
 // This assumes that the protocol name doesn't change after it's been added to this.
 - (void)addProtocol:(CDOCProtocol *)protocol;
 {
+    if (!protocol.name) {
+        return;
+    }
+    
     if ([_adoptedProtocolNames containsObject:protocol.name] == NO) {
         [_protocols addObject:protocol];
         [_adoptedProtocolNames addObject:protocol.name];

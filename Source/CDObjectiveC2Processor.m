@@ -231,6 +231,10 @@
     //NSLog(@"%016lx %016lx %016lx %016lx", objc2Class.isa, objc2Class.superclass, objc2Class.cache, objc2Class.vtable);
     //NSLog(@"%016lx %016lx %016lx %016lx", objc2Class.data, objc2Class.reserved1, objc2Class.reserved2, objc2Class.reserved3);
     
+    if (!objc2Class.data) {
+        return nil;
+    }
+    
     NSParameterAssert(objc2Class.data != 0);
     [cursor setAddress:objc2Class.data];
 
